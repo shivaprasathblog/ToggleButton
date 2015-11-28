@@ -11,7 +11,7 @@ import android.widget.ToggleButton;
 public class MainActivity extends Activity 
 
 {
-	//Defining the Toggle button
+	//STEP 1 : Defining the Toggle button
 	ToggleButton tbt;
 
 	@Override
@@ -19,9 +19,9 @@ public class MainActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		//Referring the toggle button from xml
+		//STEP 2 : Referring the toggle button from xml
 		tbt=(ToggleButton)findViewById(R.id.toggleButton1);
-		//Using on checked change listener
+		//STEP 3 : Creating on checked change listener for Toggle Button 
 		tbt.setOnCheckedChangeListener(new OnCheckedChangeListener()
 		{
 			
@@ -29,12 +29,12 @@ public class MainActivity extends Activity
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) 
 			{
 				// TODO Auto-generated method stub
-				//If Toggle button is in condition one
+				//STEP 4 : If Toggle button is in condition one
 				if(arg1==true)
 				{
 					 Toast.makeText(getApplicationContext(), "Machine is ON , Press to OFF",Toast.LENGTH_LONG).show();
 				}
-				//If Toggle button is in condition two
+				//STEP 5 : If Toggle button is in condition two
 				else if(arg1==false)
 				{
 					 Toast.makeText(getApplicationContext(), " Machine is OFF , Press to ON ",Toast.LENGTH_LONG).show();
